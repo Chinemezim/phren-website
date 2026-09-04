@@ -1,0 +1,1030 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800;900&display=swap");
+
+:root {
+  --hustle-black: #050505;
+  --hustle-dark: #0b0b0b;
+  --hustle-card: #111111;
+  --hustle-line: #292929;
+  --hustle-white: #f4f4f0;
+  --hustle-muted: #8f8f8f;
+  --hustle-lime: #c8ff00;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.hustles-page {
+  width: 100%;
+  min-height: 100vh;
+  background: var(--hustle-black);
+  color: var(--hustle-white);
+  font-family: "Inter", sans-serif;
+  overflow-x: hidden;
+}
+
+.hustles-page a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.hustles-nav {
+  width: 100%;
+  min-height: 82px;
+  padding: 0 5vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+  border-bottom: 1px solid var(--hustle-line);
+  background: rgba(5, 5, 5, 0.97);
+  position: relative;
+  z-index: 20;
+}
+
+.hustles-logo {
+  font-family: "Anton", sans-serif;
+  font-size: 28px;
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+
+.hustles-logo span {
+  color: var(--hustle-lime);
+  margin-left: 5px;
+}
+
+.hustles-nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  flex: 1;
+}
+
+.hustles-nav-links a {
+  color: #b8b8b8;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  transition: 0.25s ease;
+}
+
+.hustles-nav-links a:hover,
+.hustles-nav-links a.active {
+  color: var(--hustle-lime);
+}
+
+.hustles-nav-button {
+  min-height: 43px;
+  padding: 0 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--hustle-lime);
+  color: #050505 !important;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 1.3px;
+  transition: 0.25s ease;
+}
+
+.hustles-nav-button:hover {
+  background: var(--hustle-white);
+  transform: translateY(-2px);
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hustles-hero {
+  min-height: 735px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  border-bottom: 1px solid var(--hustle-line);
+  background:
+    radial-gradient(
+      circle at 76% 45%,
+      rgba(200, 255, 0, 0.09),
+      transparent 29%
+    ),
+    linear-gradient(135deg, #080808 0%, #050505 65%, #0d0d0d 100%);
+}
+
+.hustles-hero-grid {
+  position: absolute;
+  inset: 0;
+  opacity: 0.15;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+  background-size: 65px 65px;
+  mask-image: linear-gradient(to right, black, transparent 85%);
+}
+
+.hustles-hero-content {
+  position: relative;
+  z-index: 3;
+  width: min(850px, 80%);
+  margin-left: 8vw;
+  padding: 100px 0;
+}
+
+.hustles-eyebrow {
+  margin: 0 0 22px;
+  color: var(--hustle-lime);
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 3px;
+}
+
+.hustles-hero h1 {
+  margin: 0;
+  font-family: "Anton", sans-serif;
+  font-size: clamp(80px, 11vw, 165px);
+  line-height: 0.84;
+  letter-spacing: -2px;
+  text-transform: uppercase;
+}
+
+.hustles-hero h1 span {
+  color: var(--hustle-lime);
+}
+
+.hustles-hero-text {
+  max-width: 560px;
+  margin: 38px 0 30px;
+  color: #a4a4a4;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.hustles-hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.hustles-button,
+.hustles-outline-button {
+  min-height: 53px;
+  padding: 0 25px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+  transition: 0.25s ease;
+}
+
+.hustles-button {
+  background: var(--hustle-lime);
+  color: #050505 !important;
+}
+
+.hustles-button:hover {
+  background: var(--hustle-white);
+  transform: translateY(-3px);
+}
+
+.hustles-outline-button {
+  border: 1px solid #383838;
+  color: var(--hustle-white) !important;
+}
+
+.hustles-outline-button:hover {
+  border-color: var(--hustle-lime);
+  color: var(--hustle-lime) !important;
+}
+
+.hustles-hero-number {
+  position: absolute;
+  right: -3vw;
+  top: 50%;
+  transform: translateY(-50%);
+  font-family: "Anton", sans-serif;
+  font-size: min(48vw, 650px);
+  line-height: 0.8;
+  color: rgba(200, 255, 0, 0.035);
+  pointer-events: none;
+  user-select: none;
+}
+
+.hustles-hero-bottom {
+  position: absolute;
+  left: 5vw;
+  right: 5vw;
+  bottom: 25px;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 17px;
+  border-top: 1px solid #252525;
+  color: #6e6e6e;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+/* =========================
+   INTRO
+========================= */
+
+.hustles-intro {
+  padding: 115px 8vw;
+  border-bottom: 1px solid var(--hustle-line);
+}
+
+.hustles-section-label {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  margin-bottom: 55px;
+  color: #858585;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+
+.hustles-section-label span {
+  color: var(--hustle-lime);
+}
+
+.hustles-intro-content {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 80px;
+  align-items: end;
+}
+
+.hustles-intro-content h2 {
+  margin: 0;
+  font-family: "Anton", sans-serif;
+  font-size: clamp(58px, 7vw, 105px);
+  line-height: 0.87;
+  letter-spacing: -1px;
+}
+
+.hustles-intro-content h2 span {
+  color: var(--hustle-lime);
+}
+
+.hustles-intro-copy {
+  max-width: 510px;
+}
+
+.hustles-intro-copy p {
+  margin: 0 0 20px;
+  color: #949494;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.hustles-intro-copy .hustles-bold {
+  color: var(--hustle-white);
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+/* =========================
+   PLAYBOOK CARDS
+========================= */
+
+.hustles-cards-section {
+  padding: 105px 5vw 120px;
+}
+
+.hustles-cards-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 60px;
+  margin-bottom: 45px;
+}
+
+.hustles-cards-header h2 {
+  margin: 0;
+  font-family: "Anton", sans-serif;
+  font-size: clamp(65px, 8vw, 115px);
+  line-height: 0.84;
+}
+
+.hustles-cards-header h2 span {
+  color: var(--hustle-lime);
+}
+
+.hustles-cards-header p {
+  max-width: 380px;
+  margin: 0 0 5px;
+  color: #858585;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.hustles-card-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-top: 1px solid var(--hustle-line);
+  border-left: 1px solid var(--hustle-line);
+}
+
+.hustle-card {
+  min-height: 390px;
+  padding: 25px;
+  border-right: 1px solid var(--hustle-line);
+  border-bottom: 1px solid var(--hustle-line);
+  background: #090909;
+  transition: 0.3s ease;
+}
+
+.hustle-card:hover {
+  background: #111111;
+  transform: translateY(-5px);
+}
+
+.hustle-card-top {
+  display: flex;
+  justify-content: space-between;
+  color: #777;
+  font-size: 10px;
+  font-weight: 900;
+}
+
+.hustle-card-top span:last-child {
+  color: var(--hustle-lime);
+  font-size: 16px;
+}
+
+.hustle-card-line {
+  width: 45px;
+  height: 2px;
+  margin-top: 45px;
+  background: var(--hustle-lime);
+}
+
+.hustle-card-label {
+  margin: 22px 0 0;
+  color: #737373;
+  font-size: 8px;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+}
+
+.hustle-card h3 {
+  margin: 8px 0 20px;
+  font-family: "Anton", sans-serif;
+  font-size: 42px;
+  line-height: 1;
+}
+
+.hustle-card-text {
+  margin: 0;
+  color: #858585;
+  font-size: 12px;
+  line-height: 1.75;
+}
+
+/* =========================
+   MANIFESTO
+========================= */
+
+.hustles-manifesto {
+  min-height: 620px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  border-top: 1px solid var(--hustle-line);
+  border-bottom: 1px solid var(--hustle-line);
+  background:
+    radial-gradient(
+      circle at 70% 45%,
+      rgba(200, 255, 0, 0.09),
+      transparent 30%
+    ),
+    #090909;
+}
+
+.hustles-manifesto-bg {
+  position: absolute;
+  right: -8vw;
+  bottom: -100px;
+  font-family: "Anton", sans-serif;
+  font-size: min(43vw, 650px);
+  line-height: 0.7;
+  color: rgba(200, 255, 0, 0.035);
+  pointer-events: none;
+  user-select: none;
+}
+
+.hustles-manifesto-content {
+  position: relative;
+  z-index: 2;
+  margin-left: 10vw;
+  max-width: 850px;
+}
+
+.hustles-manifesto-content h2 {
+  margin: 0;
+  font-family: "Anton", sans-serif;
+  font-size: clamp(72px, 10vw, 150px);
+  line-height: 0.84;
+  letter-spacing: -2px;
+}
+
+.hustles-manifesto-content h2 span {
+  color: var(--hustle-lime);
+}
+
+.hustles-manifesto-content > p:last-child {
+  max-width: 520px;
+  margin: 35px 0 0;
+  color: #929292;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/* =========================
+   HOW TO HUSTLE
+========================= */
+
+.hustles-how {
+  padding: 110px 8vw 120px;
+}
+
+.hustles-how-header {
+  display: grid;
+  grid-template-columns: 1fr 0.55fr;
+  gap: 80px;
+  align-items: end;
+  margin-bottom: 60px;
+}
+
+.hustles-how-header h2 {
+  margin: 0;
+  font-family: "Anton", sans-serif;
+  font-size: clamp(65px, 8vw, 115px);
+  line-height: 0.84;
+}
+
+.hustles-how-header h2 span {
+  color: var(--hustle-lime);
+}
+
+.hustles-how-header p {
+  margin: 0;
+  color: #858585;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.hustles-steps {
+  border-top: 1px solid var(--hustle-line);
+}
+
+.hustle-step {
+  min-height: 125px;
+  display: grid;
+  grid-template-columns: 100px 1fr 60px;
+  align-items: center;
+  gap: 25px;
+  border-bottom: 1px solid var(--hustle-line);
+  transition: 0.25s ease;
+}
+
+.hustle-step:hover {
+  padding-left: 15px;
+  background: #0a0a0a;
+}
+
+.hustle-step-number {
+  color: var(--hustle-lime);
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+.hustle-step-content {
+  display: flex;
+  align-items: center;
+  gap: 70px;
+}
+
+.hustle-step-content h3 {
+  width: 260px;
+  margin: 0;
+  font-family: "Anton", sans-serif;
+  font-size: 28px;
+  line-height: 1;
+}
+
+.hustle-step-content p {
+  max-width: 540px;
+  margin: 0;
+  color: #858585;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.hustle-step-arrow {
+  justify-self: end;
+  color: #666;
+  font-size: 22px;
+  transition: 0.25s ease;
+}
+
+.hustle-step:hover .hustle-step-arrow {
+  color: var(--hustle-lime);
+  transform: translate(4px, -4px);
+}
+
+/* =========================
+   OPPORTUNITY
+========================= */
+
+.hustles-opportunity {
+  min-height: 580px;
+  padding: 100px 8vw;
+  display: grid;
+  grid-template-columns: 1fr 0.45fr;
+  gap: 60px;
+  align-items: center;
+  overflow: hidden;
+  border-top: 1px solid var(--hustle-line);
+  border-bottom: 1px solid var(--hustle-line);
+  background: linear-gradient(90deg, #0b0b0b, #070707);
+}
+
+.hustles-opportunity-content {
+  max-width: 850px;
+}
+
+.hustles-opportunity-content h2 {
+  margin: 0;
+  font-family: "Anton", sans-serif;
+  font-size: clamp(70px, 9vw, 135px);
+  line-height: 0.83;
+}
+
+.hustles-opportunity-content h2 span {
+  color: var(--hustle-lime);
+}
+
+.hustles-opportunity-content > p:not(.hustles-eyebrow) {
+  max-width: 560px;
+  margin: 32px 0;
+  color: #8c8c8c;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.hustles-opportunity-side {
+  text-align: right;
+}
+
+.hustles-opportunity-side div {
+  font-family: "Anton", sans-serif;
+  font-size: clamp(150px, 20vw, 300px);
+  line-height: 0.8;
+  color: rgba(200, 255, 0, 0.08);
+}
+
+.hustles-opportunity-side span {
+  display: block;
+  margin-top: 25px;
+  color: #686868;
+  font-size: 8px;
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+
+/* =========================
+   CTA
+========================= */
+
+.hustles-cta {
+  min-height: 590px;
+  padding: 110px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background:
+    linear-gradient(rgba(5, 5, 5, 0.85), rgba(5, 5, 5, 0.96)),
+    repeating-linear-gradient(
+      -45deg,
+      transparent 0,
+      transparent 10px,
+      rgba(255, 255, 255, 0.018) 10px,
+      rgba(255, 255, 255, 0.018) 11px
+    );
+}
+
+.hustles-cta h2 {
+  margin: 0;
+  font-family: "Anton", sans-serif;
+  font-size: clamp(80px, 13vw, 180px);
+  line-height: 0.8;
+  letter-spacing: -3px;
+}
+
+.hustles-cta h2 span {
+  color: var(--hustle-lime);
+}
+
+.hustles-cta > p:not(.hustles-eyebrow) {
+  max-width: 480px;
+  margin: 35px auto 28px;
+  color: #898989;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.hustles-cta-button {
+  min-height: 54px;
+  padding: 0 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--hustle-lime);
+  color: #050505 !important;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+  transition: 0.25s ease;
+}
+
+.hustles-cta-button:hover {
+  background: var(--hustle-white);
+  transform: translateY(-3px);
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.hustles-footer {
+  padding: 65px 5vw 25px;
+  background: #030303;
+}
+
+.hustles-footer-brand {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 30px;
+  padding-bottom: 45px;
+  border-bottom: 1px solid var(--hustle-line);
+}
+
+.hustles-footer-brand p {
+  max-width: 360px;
+  margin: 0;
+  color: #626262;
+  font-size: 9px;
+  font-weight: 800;
+  line-height: 1.7;
+  letter-spacing: 1.5px;
+  text-align: right;
+}
+
+.hustles-footer-links {
+  padding: 28px 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 28px;
+}
+
+.hustles-footer-links a {
+  color: #727272;
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+  transition: 0.25s ease;
+}
+
+.hustles-footer-links a:hover {
+  color: var(--hustle-lime);
+}
+
+.hustles-footer-bottom {
+  padding-top: 22px;
+  border-top: 1px solid var(--hustle-line);
+  display: flex;
+  justify-content: space-between;
+  color: #505050;
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1100px) {
+  .hustles-nav-links {
+    gap: 13px;
+  }
+
+  .hustles-nav-links a {
+    font-size: 8px;
+  }
+
+  .hustles-card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hustle-card {
+    min-height: 350px;
+  }
+
+  .hustles-intro-content,
+  .hustles-how-header {
+    gap: 45px;
+  }
+
+  .hustle-step-content {
+    gap: 30px;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 760px) {
+  .hustles-nav {
+    min-height: 70px;
+    padding: 0 20px;
+  }
+
+  .hustles-logo {
+    font-size: 24px;
+  }
+
+  .hustles-nav-links {
+    display: none;
+  }
+
+  .hustles-nav-button {
+    min-height: 38px;
+    padding: 0 13px;
+    font-size: 8px;
+  }
+
+  .hustles-hero {
+    min-height: 690px;
+  }
+
+  .hustles-hero-content {
+    width: auto;
+    margin: 0;
+    padding: 75px 24px 110px;
+  }
+
+  .hustles-hero h1 {
+    font-size: clamp(68px, 19vw, 105px);
+    letter-spacing: -1px;
+  }
+
+  .hustles-hero-text {
+    max-width: 450px;
+    font-size: 13px;
+  }
+
+  .hustles-hero-actions {
+    align-items: stretch;
+    flex-direction: column;
+    width: 100%;
+    max-width: 330px;
+  }
+
+  .hustles-button,
+  .hustles-outline-button {
+    width: 100%;
+  }
+
+  .hustles-hero-number {
+    right: -18vw;
+    top: 59%;
+    font-size: 86vw;
+  }
+
+  .hustles-hero-bottom {
+    left: 24px;
+    right: 24px;
+    gap: 10px;
+  }
+
+  .hustles-hero-bottom span {
+    font-size: 7px;
+  }
+
+  .hustles-hero-bottom span:nth-child(2) {
+    display: none;
+  }
+
+  .hustles-intro {
+    padding: 80px 24px;
+  }
+
+  .hustles-section-label {
+    margin-bottom: 38px;
+  }
+
+  .hustles-intro-content {
+    display: block;
+  }
+
+  .hustles-intro-content h2 {
+    font-size: clamp(55px, 16vw, 85px);
+  }
+
+  .hustles-intro-copy {
+    margin-top: 38px;
+  }
+
+  .hustles-intro-copy p {
+    font-size: 13px;
+  }
+
+  .hustles-cards-section {
+    padding: 75px 20px 90px;
+  }
+
+  .hustles-cards-header {
+    display: block;
+    margin-bottom: 35px;
+  }
+
+  .hustles-cards-header h2 {
+    font-size: clamp(65px, 18vw, 100px);
+  }
+
+  .hustles-cards-header p {
+    margin-top: 28px;
+    font-size: 12px;
+  }
+
+  .hustles-card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hustle-card {
+    min-height: 330px;
+  }
+
+  .hustles-manifesto {
+    min-height: 530px;
+  }
+
+  .hustles-manifesto-content {
+    margin: 0;
+    padding: 70px 24px;
+  }
+
+  .hustles-manifesto-content h2 {
+    font-size: clamp(67px, 18vw, 110px);
+  }
+
+  .hustles-manifesto-content > p:last-child {
+    font-size: 13px;
+  }
+
+  .hustles-manifesto-bg {
+    right: -28vw;
+    bottom: 0;
+    font-size: 80vw;
+  }
+
+  .hustles-how {
+    padding: 80px 20px 90px;
+  }
+
+  .hustles-how-header {
+    display: block;
+    margin-bottom: 45px;
+  }
+
+  .hustles-how-header h2 {
+    font-size: clamp(65px, 18vw, 105px);
+  }
+
+  .hustles-how-header p {
+    margin-top: 30px;
+    font-size: 12px;
+  }
+
+  .hustle-step {
+    min-height: auto;
+    padding: 28px 0;
+    grid-template-columns: 45px 1fr 30px;
+    gap: 10px;
+  }
+
+  .hustle-step:hover {
+    padding-left: 5px;
+  }
+
+  .hustle-step-content {
+    display: block;
+  }
+
+  .hustle-step-content h3 {
+    width: auto;
+    font-size: 22px;
+  }
+
+  .hustle-step-content p {
+    margin-top: 12px;
+    font-size: 11px;
+  }
+
+  .hustles-opportunity {
+    min-height: 550px;
+    padding: 80px 24px;
+    display: block;
+  }
+
+  .hustles-opportunity-content h2 {
+    font-size: clamp(68px, 19vw, 110px);
+  }
+
+  .hustles-opportunity-content > p:not(.hustles-eyebrow) {
+    font-size: 13px;
+  }
+
+  .hustles-opportunity-side {
+    display: none;
+  }
+
+  .hustles-cta {
+    min-height: 500px;
+    padding: 90px 20px;
+  }
+
+  .hustles-cta h2 {
+    font-size: clamp(75px, 21vw, 125px);
+  }
+
+  .hustles-cta > p:not(.hustles-eyebrow) {
+    font-size: 13px;
+  }
+
+  .hustles-footer {
+    padding: 50px 24px 25px;
+  }
+
+  .hustles-footer-brand {
+    display: block;
+  }
+
+  .hustles-footer-brand p {
+    margin-top: 25px;
+    text-align: left;
+  }
+
+  .hustles-footer-links {
+    gap: 18px;
+  }
+
+  .hustles-footer-bottom {
+    gap: 10px;
+  }
+}
+
+/* =========================
+   SMALL PHONES
+========================= */
+
+@media (max-width: 420px) {
+  .hustles-nav-button {
+    display: none;
+  }
+
+  .hustles-hero h1 {
+    font-size: 65px;
+  }
+
+  .hustles-card {
+    padding: 22px;
+  }
+
+  .hustle-card h3 {
+    font-size: 38px;
+  }
+
+  .hustles-footer-bottom {
+    flex-direction: column;
+  }
+}
