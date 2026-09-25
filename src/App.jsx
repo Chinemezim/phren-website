@@ -147,6 +147,10 @@ function App() {
             MERCH
           </Link>
 
+          <Link to="/phrenchie" onClick={closeMenu}>
+            PHRENCHIE
+          </Link>
+
           <Link to="/hustles" onClick={closeMenu}>
             HUSTLES
           </Link>
